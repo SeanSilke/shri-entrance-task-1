@@ -11,12 +11,12 @@ module.exports = {
     return models.User.findById(id);
   },
   users (root, args, context) {
-    return models.User.findAll({}, context);
+    return models.User.findAll(args, context);
   },
   room (root, { id }) {
     return models.Room.findById(id);
   },
   rooms (root, args, context) {
-    return models.Room.findAll({ offset: 1 }, context);
+    return models.Room.findAll(args, context);
   }
 };
